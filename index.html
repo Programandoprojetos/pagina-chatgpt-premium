@@ -39,7 +39,7 @@
                 <strong>R$ 30,00</strong>
                 <em>ao ano</em>
               </div>
-              <a class="cta" href="https://wa.me/5564981084172?text=Quero%20garantir%20meu%20acesso%20ao%20ChatGPT%20Premium%20por%20R%2430%2C00" target="_blank" rel="noreferrer">
+              <a class="cta" href="#pedido">
                 Garantir meu acesso no WhatsApp
               </a>
               <p class="microcopy">Atendimento direto, ativacao orientada e suporte rapido.</p>
@@ -221,9 +221,23 @@
           <p class="alert">Vagas limitadas para este lote</p>
           <h2>Garanta seu acesso ao ChatGPT Premium hoje</h2>
           <div class="final-price">R$ 30,00 <span>ao ano</span></div>
-          <a class="cta cta--wide" href="https://wa.me/5564981084172?text=Quero%20garantir%20meu%20acesso%20ao%20ChatGPT%20Premium%20por%20R%2430%2C00" target="_blank" rel="noreferrer">
-            Chamar no WhatsApp e garantir acesso
-          </a>
+          <form class="checkout-form" id="pedido">
+            <label>
+              Nome completo
+              <input type="text" name="nome" placeholder="Digite seu nome" autocomplete="name" required />
+            </label>
+            <label>
+              E-mail de acesso
+              <input type="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required />
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="telefone" placeholder="(DDD) 00000-0000" autocomplete="tel" required />
+            </label>
+            <button class="cta cta--wide" type="submit">
+              Enviar dados e garantir acesso
+            </button>
+          </form>
           <p class="whatsapp">Suporte: (64) 98108-4172</p>
         </div>
       </section>

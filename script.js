@@ -19,3 +19,27 @@ function renderCountdown() {
 
 renderCountdown();
 setInterval(renderCountdown, 1000);
+
+const checkoutForm = document.querySelector("#pedido");
+
+if (checkoutForm) {
+  checkoutForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const data = new FormData(checkoutForm);
+    const nome = String(data.get("nome") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const telefone = String(data.get("telefone") || "").trim();
+
+    const message = [
+      "Quero garantir meu acesso ao ChatGPT Premium por R$30,00.",
+      "",
+      `Nome: ${nome}`,
+      `E-mail de acesso: ${email}`,
+      `WhatsApp: ${telefone}`,
+    ].join("\n");
+
+    const url = `https://wa.me/5564981084172?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+}
